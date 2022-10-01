@@ -48,4 +48,32 @@ let name: any;
 
 let printName: (name: string) => never;
 ```
-Aliases (Type and Interface)
+Type and Interface
+```
+type X = {
+    a: string;
+    b: number;
+}
+
+type Y = X & {
+    c: number;
+    d: string;
+}
+
+interface Person = {
+    name: string;
+    age?: number;
+}
+
+interface Guy extends Person {
+    profession: string;
+}
+```
+React & TypeScript
+```
+const App: React.FC = () => {
+  return (
+    <div className="App"> Hey </div>);
+}
+
+```
